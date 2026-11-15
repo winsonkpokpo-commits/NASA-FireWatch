@@ -1,0 +1,860 @@
+{
+  "unit": "VIIRS-equivalent hotspots (one VIIRS instrument)",
+  "train_window": [
+    "2012-02",
+    "2021-12"
+  ],
+  "cross_validation": "leave-one-year-out",
+  "metrics": {
+    "raw_modis": {
+      "cell_month": {
+        "r2": 0.3377867293014477,
+        "mae": 13.406391402714933,
+        "bias_pct": -79.07605520041912
+      },
+      "domain_month": {
+        "r2": 0.06365217790421751,
+        "mae": 4179.365546218487,
+        "bias_pct": -79.07605520041912
+      },
+      "domain_year": {
+        "r2": -35.23149705926827,
+        "mae": 49734.45,
+        "bias_pct": -79.07605520041912
+      }
+    },
+    "global_ratio": {
+      "cell_month": {
+        "r2": 0.7906324956041659,
+        "mae": 6.510314956536633,
+        "bias_pct": 0.07990513851032006
+      },
+      "domain_month": {
+        "r2": 0.9259313131301357,
+        "mae": 1153.343487426202,
+        "bias_pct": 0.07990513851032006
+      },
+      "domain_year": {
+        "r2": 0.7337847672502557,
+        "mae": 3534.1194148478658,
+        "bias_pct": 0.07990513851032006
+      }
+    },
+    "monthly_ratio": {
+      "cell_month": {
+        "r2": 0.8677511470977194,
+        "mae": 5.904310884972863,
+        "bias_pct": 0.22384999189877125
+      },
+      "domain_month": {
+        "r2": 0.9853914637660582,
+        "mae": 452.013946698243,
+        "bias_pct": 0.22384999189875274
+      },
+      "domain_year": {
+        "r2": 0.91388150416734,
+        "mae": 2045.6783759960272,
+        "bias_pct": 0.22384999189875274
+      }
+    },
+    "gbm": {
+      "cell_month": {
+        "r2": 0.9242596529433047,
+        "mae": 4.465915767028754,
+        "bias_pct": -0.5130013522034967
+      },
+      "domain_month": {
+        "r2": 0.9885695138791029,
+        "mae": 412.160924133248,
+        "bias_pct": -0.5130013522035338
+      },
+      "domain_year": {
+        "r2": 0.912032472944809,
+        "mae": 1972.2260998244442,
+        "bias_pct": -0.5130013522034967
+      }
+    },
+    "gbm_terra_only": {
+      "cell_month": {
+        "r2": 0.867261760515355,
+        "mae": 5.78621224978153,
+        "bias_pct": -0.8297158158212927
+      },
+      "domain_month": {
+        "r2": 0.9842080836930431,
+        "mae": 510.3671876637908,
+        "bias_pct": -0.8297158158213113
+      },
+      "domain_year": {
+        "r2": 0.8921281185730096,
+        "mae": 2093.817358021747,
+        "bias_pct": -0.8297158158213113
+      }
+    }
+  },
+  "drift_after_training": {
+    "2022": {
+      "observed": 49433.5,
+      "predicted_from_modis": 49383.23036081921,
+      "ratio": 0.9989830855759598
+    },
+    "2023": {
+      "observed": 38539.833333333336,
+      "predicted_from_modis": 37025.79190851218,
+      "ratio": 0.9607148943347492
+    },
+    "2024": {
+      "observed": 43265.333333333336,
+      "predicted_from_modis": 43990.12563838827,
+      "ratio": 1.016752264439311
+    },
+    "2025": {
+      "observed": 40380.333333333336,
+      "predicted_from_modis": 42748.536282640736,
+      "ratio": 1.0586474343774792
+    },
+    "2026": {
+      "observed": 28175.166666666668,
+      "predicted_from_modis": 25091.776735655152,
+      "ratio": 0.8905635601914861
+    }
+  },
+  "oof_domain_month": {
+    "2012-02": {
+      "viirs_obs": 8760.0,
+      "modis": 1406.0,
+      "pred_monthly_ratio": 8586.320054800295,
+      "pred_gbm": 9412.758677523223
+    },
+    "2012-03": {
+      "viirs_obs": 3871.0,
+      "modis": 670.0,
+      "pred_monthly_ratio": 4925.734420105281,
+      "pred_gbm": 4982.988109866951
+    },
+    "2012-04": {
+      "viirs_obs": 1104.0,
+      "modis": 122.0,
+      "pred_monthly_ratio": 1256.005132591959,
+      "pred_gbm": 1297.7885631531256
+    },
+    "2012-05": {
+      "viirs_obs": 254.0,
+      "modis": 18.0,
+      "pred_monthly_ratio": 207.51330798479088,
+      "pred_gbm": 283.18695180337465
+    },
+    "2012-06": {
+      "viirs_obs": 68.0,
+      "modis": 5.0,
+      "pred_monthly_ratio": 73.4313725490196,
+      "pred_gbm": 95.51449687185634
+    },
+    "2012-07": {
+      "viirs_obs": 17.0,
+      "modis": 0.0,
+      "pred_monthly_ratio": 0.0,
+      "pred_gbm": 31.136198027703067
+    },
+    "2012-08": {
+      "viirs_obs": 30.0,
+      "modis": 4.0,
+      "pred_monthly_ratio": 58.18181818181818,
+      "pred_gbm": 66.61392760010973
+    },
+    "2012-09": {
+      "viirs_obs": 62.0,
+      "modis": 6.0,
+      "pred_monthly_ratio": 107.04545454545453,
+      "pred_gbm": 84.07572102222963
+    },
+    "2012-10": {
+      "viirs_obs": 188.0,
+      "modis": 39.0,
+      "pred_monthly_ratio": 193.31673306772907,
+      "pred_gbm": 224.99773688447635
+    },
+    "2012-11": {
+      "viirs_obs": 10138.0,
+      "modis": 3038.0,
+      "pred_monthly_ratio": 10849.080833039181,
+      "pred_gbm": 11480.224653783458
+    },
+    "2012-12": {
+      "viirs_obs": 30854.0,
+      "modis": 7648.0,
+      "pred_monthly_ratio": 30457.846320170815,
+      "pred_gbm": 28013.951209064806
+    },
+    "2013-01": {
+      "viirs_obs": 23632.0,
+      "modis": 4701.0,
+      "pred_monthly_ratio": 24564.81514279389,
+      "pred_gbm": 23341.18557654253
+    },
+    "2013-02": {
+      "viirs_obs": 11119.0,
+      "modis": 1701.0,
+      "pred_monthly_ratio": 10337.105282877483,
+      "pred_gbm": 10431.804865966193
+    },
+    "2013-03": {
+      "viirs_obs": 3045.0,
+      "modis": 512.0,
+      "pred_monthly_ratio": 3735.7287911361004,
+      "pred_gbm": 4095.9414020648687
+    },
+    "2013-04": {
+      "viirs_obs": 1104.0,
+      "modis": 83.0,
+      "pred_monthly_ratio": 826.9081125827814,
+      "pred_gbm": 1010.0281859378422
+    },
+    "2013-05": {
+      "viirs_obs": 172.0,
+      "modis": 18.0,
+      "pred_monthly_ratio": 213.1254752851711,
+      "pred_gbm": 287.2266558337971
+    },
+    "2013-06": {
+      "viirs_obs": 145.0,
+      "modis": 16.0,
+      "pred_monthly_ratio": 268.8,
+      "pred_gbm": 150.55129001059174
+    },
+    "2013-07": {
+      "viirs_obs": 33.0,
+      "modis": 2.0,
+      "pred_monthly_ratio": 78.42857142857143,
+      "pred_gbm": 46.19123881438339
+    },
+    "2013-08": {
+      "viirs_obs": 188.0,
+      "modis": 13.0,
+      "pred_monthly_ratio": 179.02857142857144,
+      "pred_gbm": 96.78759555440003
+    },
+    "2013-09": {
+      "viirs_obs": 65.0,
+      "modis": 6.0,
+      "pred_monthly_ratio": 106.22727272727272,
+      "pred_gbm": 62.851845525117966
+    },
+    "2013-10": {
+      "viirs_obs": 630.0,
+      "modis": 101.0,
+      "pred_monthly_ratio": 480.9558610709117,
+      "pred_gbm": 477.10941367763576
+    },
+    "2013-11": {
+      "viirs_obs": 14450.0,
+      "modis": 3570.0,
+      "pred_monthly_ratio": 12359.826495572022,
+      "pred_gbm": 12391.567345426747
+    },
+    "2013-12": {
+      "viirs_obs": 27361.0,
+      "modis": 6780.0,
+      "pred_monthly_ratio": 27007.558032059576,
+      "pred_gbm": 26850.55532576266
+    },
+    "2014-01": {
+      "viirs_obs": 18246.0,
+      "modis": 3558.0,
+      "pred_monthly_ratio": 18518.22793414764,
+      "pred_gbm": 18998.61817154416
+    },
+    "2014-02": {
+      "viirs_obs": 10210.0,
+      "modis": 1710.0,
+      "pred_monthly_ratio": 10480.04551783228,
+      "pred_gbm": 10537.240580225269
+    },
+    "2014-03": {
+      "viirs_obs": 3735.0,
+      "modis": 375.0,
+      "pred_monthly_ratio": 2633.671571798189,
+      "pred_gbm": 3315.785226608634
+    },
+    "2014-04": {
+      "viirs_obs": 1674.0,
+      "modis": 149.0,
+      "pred_monthly_ratio": 1495.871278458844,
+      "pred_gbm": 1380.6667582267285
+    },
+    "2014-05": {
+      "viirs_obs": 184.0,
+      "modis": 22.0,
+      "pred_monthly_ratio": 263.49034749034746,
+      "pred_gbm": 286.0733030967208
+    },
+    "2014-06": {
+      "viirs_obs": 68.0,
+      "modis": 3.0,
+      "pred_monthly_ratio": 42.39622641509434,
+      "pred_gbm": 79.18296432578593
+    },
+    "2014-07": {
+      "viirs_obs": 26.0,
+      "modis": 0.0,
+      "pred_monthly_ratio": 0.0,
+      "pred_gbm": 31.430291648557002
+    },
+    "2014-08": {
+      "viirs_obs": 25.0,
+      "modis": 0.0,
+      "pred_monthly_ratio": 0.0,
+      "pred_gbm": 51.40659980455449
+    },
+    "2014-09": {
+      "viirs_obs": 40.0,
+      "modis": 0.0,
+      "pred_monthly_ratio": 0.0,
+      "pred_gbm": 30.206739759197383
+    },
+    "2014-10": {
+      "viirs_obs": 585.0,
+      "modis": 136.0,
+      "pred_monthly_ratio": 691.5060975609756,
+      "pred_gbm": 638.5753115667246
+    },
+    "2014-11": {
+      "viirs_obs": 11550.0,
+      "modis": 3117.0,
+      "pred_monthly_ratio": 10975.262696479964,
+      "pred_gbm": 10913.128563984268
+    },
+    "2014-12": {
+      "viirs_obs": 22955.0,
+      "modis": 6482.0,
+      "pred_monthly_ratio": 26367.21006157474,
+      "pred_gbm": 25730.91433039997
+    },
+    "2015-01": {
+      "viirs_obs": 19209.0,
+      "modis": 3926.0,
+      "pred_monthly_ratio": 20567.665745955448,
+      "pred_gbm": 20238.275799650528
+    },
+    "2015-02": {
+      "viirs_obs": 9047.0,
+      "modis": 1178.0,
+      "pred_monthly_ratio": 7090.939289805269,
+      "pred_gbm": 7937.411647272617
+    },
+    "2015-03": {
+      "viirs_obs": 5400.0,
+      "modis": 881.0,
+      "pred_monthly_ratio": 6480.423740753787,
+      "pred_gbm": 6049.859659648805
+    },
+    "2015-04": {
+      "viirs_obs": 1253.0,
+      "modis": 142.0,
+      "pred_monthly_ratio": 1468.939947780679,
+      "pred_gbm": 1415.0332632250806
+    },
+    "2015-05": {
+      "viirs_obs": 451.0,
+      "modis": 43.0,
+      "pred_monthly_ratio": 512.2058823529412,
+      "pred_gbm": 452.1730800718229
+    },
+    "2015-06": {
+      "viirs_obs": 86.0,
+      "modis": 4.0,
+      "pred_monthly_ratio": 56.23076923076923,
+      "pred_gbm": 76.12144549313459
+    },
+    "2015-07": {
+      "viirs_obs": 56.0,
+      "modis": 1.0,
+      "pred_monthly_ratio": 31.4375,
+      "pred_gbm": 31.14417470679138
+    },
+    "2015-08": {
+      "viirs_obs": 88.0,
+      "modis": 15.0,
+      "pred_monthly_ratio": 264.54545454545456,
+      "pred_gbm": 130.06502477394332
+    },
+    "2015-09": {
+      "viirs_obs": 63.0,
+      "modis": 2.0,
+      "pred_monthly_ratio": 30.115384615384617,
+      "pred_gbm": 39.11389541471393
+    },
+    "2015-10": {
+      "viirs_obs": 143.0,
+      "modis": 20.0,
+      "pred_monthly_ratio": 97.86269430051814,
+      "pred_gbm": 126.00865114351456
+    },
+    "2015-11": {
+      "viirs_obs": 7881.0,
+      "modis": 2261.0,
+      "pred_monthly_ratio": 8024.374941342093,
+      "pred_gbm": 8683.125347345362
+    },
+    "2015-12": {
+      "viirs_obs": 22492.0,
+      "modis": 5856.0,
+      "pred_monthly_ratio": 23506.274754453356,
+      "pred_gbm": 23646.894537966553
+    },
+    "2016-01": {
+      "viirs_obs": 22143.0,
+      "modis": 4038.0,
+      "pred_monthly_ratio": 20813.043111831445,
+      "pred_gbm": 19838.72516202094
+    },
+    "2016-02": {
+      "viirs_obs": 9064.0,
+      "modis": 1758.0,
+      "pred_monthly_ratio": 10910.152152904542,
+      "pred_gbm": 11000.046430108137
+    },
+    "2016-03": {
+      "viirs_obs": 4004.0,
+      "modis": 495.0,
+      "pred_monthly_ratio": 3523.283311345647,
+      "pred_gbm": 3770.2769946116887
+    },
+    "2016-04": {
+      "viirs_obs": 619.0,
+      "modis": 64.0,
+      "pred_monthly_ratio": 653.039934800326,
+      "pred_gbm": 926.5466303728888
+    },
+    "2016-05": {
+      "viirs_obs": 237.0,
+      "modis": 17.0,
+      "pred_monthly_ratio": 196.3371212121212,
+      "pred_gbm": 268.81492645642203
+    },
+    "2016-06": {
+      "viirs_obs": 66.0,
+      "modis": 5.0,
+      "pred_monthly_ratio": 73.62745098039215,
+      "pred_gbm": 97.36013389919636
+    },
+    "2016-07": {
+      "viirs_obs": 45.0,
+      "modis": 2.0,
+      "pred_monthly_ratio": 75.0,
+      "pred_gbm": 43.67442728409757
+    },
+    "2016-08": {
+      "viirs_obs": 27.0,
+      "modis": 1.0,
+      "pred_monthly_ratio": 13.680851063829786,
+      "pred_gbm": 58.050546857763635
+    },
+    "2016-09": {
+      "viirs_obs": 62.0,
+      "modis": 4.0,
+      "pred_monthly_ratio": 65.41666666666667,
+      "pred_gbm": 64.56303392259795
+    },
+    "2016-10": {
+      "viirs_obs": 1055.0,
+      "modis": 275.0,
+      "pred_monthly_ratio": 1524.2021276595744,
+      "pred_gbm": 1137.3955817433166
+    },
+    "2016-11": {
+      "viirs_obs": 11134.0,
+      "modis": 3144.0,
+      "pred_monthly_ratio": 11141.562195230073,
+      "pred_gbm": 11006.056548343377
+    },
+    "2016-12": {
+      "viirs_obs": 16464.0,
+      "modis": 3571.0,
+      "pred_monthly_ratio": 14060.834234102638,
+      "pred_gbm": 15289.830891630427
+    },
+    "2017-01": {
+      "viirs_obs": 17501.0,
+      "modis": 3152.0,
+      "pred_monthly_ratio": 16254.621199958117,
+      "pred_gbm": 17094.074123357943
+    },
+    "2017-02": {
+      "viirs_obs": 16075.0,
+      "modis": 2617.0,
+      "pred_monthly_ratio": 15993.645184893343,
+      "pred_gbm": 15405.386452182478
+    },
+    "2017-03": {
+      "viirs_obs": 5220.0,
+      "modis": 760.0,
+      "pred_monthly_ratio": 5497.320227625452,
+      "pred_gbm": 5230.6492823795015
+    },
+    "2017-04": {
+      "viirs_obs": 1337.0,
+      "modis": 123.0,
+      "pred_monthly_ratio": 1242.8476027397262,
+      "pred_gbm": 1301.1395841405565
+    },
+    "2017-05": {
+      "viirs_obs": 277.0,
+      "modis": 17.0,
+      "pred_monthly_ratio": 193.76136363636365,
+      "pred_gbm": 248.244954287473
+    },
+    "2017-06": {
+      "viirs_obs": 47.0,
+      "modis": 4.0,
+      "pred_monthly_ratio": 59.23076923076923,
+      "pred_gbm": 75.92443011970903
+    },
+    "2017-07": {
+      "viirs_obs": 24.0,
+      "modis": 0.0,
+      "pred_monthly_ratio": 0.0,
+      "pred_gbm": 32.09353773188327
+    },
+    "2017-08": {
+      "viirs_obs": 16.0,
+      "modis": 4.0,
+      "pred_monthly_ratio": 59.45454545454545,
+      "pred_gbm": 77.14212150147755
+    },
+    "2017-09": {
+      "viirs_obs": 66.0,
+      "modis": 3.0,
+      "pred_monthly_ratio": 46.62,
+      "pred_gbm": 57.24030593231202
+    },
+    "2017-10": {
+      "viirs_obs": 873.0,
+      "modis": 146.0,
+      "pred_monthly_ratio": 688.7538699690402,
+      "pred_gbm": 623.8541795182183
+    },
+    "2017-11": {
+      "viirs_obs": 12989.0,
+      "modis": 4004.0,
+      "pred_monthly_ratio": 14409.26997879989,
+      "pred_gbm": 14944.47729618657
+    },
+    "2017-12": {
+      "viirs_obs": 12645.0,
+      "modis": 3005.0,
+      "pred_monthly_ratio": 11946.9713270256,
+      "pred_gbm": 12877.51825933996
+    },
+    "2018-01": {
+      "viirs_obs": 18142.0,
+      "modis": 3969.0,
+      "pred_monthly_ratio": 20977.207372278506,
+      "pred_gbm": 20797.11515664821
+    },
+    "2018-02": {
+      "viirs_obs": 12572.0,
+      "modis": 1937.0,
+      "pred_monthly_ratio": 11769.31994362227,
+      "pred_gbm": 11826.21291212747
+    },
+    "2018-03": {
+      "viirs_obs": 5131.0,
+      "modis": 530.0,
+      "pred_monthly_ratio": 3695.231381655333,
+      "pred_gbm": 3951.615547562125
+    },
+    "2018-04": {
+      "viirs_obs": 1092.5,
+      "modis": 96.0,
+      "pred_monthly_ratio": 967.7523012552301,
+      "pred_gbm": 1086.106185061124
+    },
+    "2018-05": {
+      "viirs_obs": 312.0,
+      "modis": 23.0,
+      "pred_monthly_ratio": 265.1240310077519,
+      "pred_gbm": 275.4636820291877
+    },
+    "2018-06": {
+      "viirs_obs": 62.0,
+      "modis": 2.0,
+      "pred_monthly_ratio": 27.962962962962962,
+      "pred_gbm": 69.56606950809449
+    },
+    "2018-07": {
+      "viirs_obs": 36.0,
+      "modis": 3.0,
+      "pred_monthly_ratio": 135.75,
+      "pred_gbm": 48.05341934794569
+    },
+    "2018-08": {
+      "viirs_obs": 69.0,
+      "modis": 4.0,
+      "pred_monthly_ratio": 54.63636363636363,
+      "pred_gbm": 67.81103359227274
+    },
+    "2018-09": {
+      "viirs_obs": 16.5,
+      "modis": 2.0,
+      "pred_monthly_ratio": 33.69230769230769,
+      "pred_gbm": 48.27925217800259
+    },
+    "2018-10": {
+      "viirs_obs": 154.0,
+      "modis": 17.0,
+      "pred_monthly_ratio": 82.62,
+      "pred_gbm": 118.04671476073584
+    },
+    "2018-11": {
+      "viirs_obs": 7805.5,
+      "modis": 2257.0,
+      "pred_monthly_ratio": 8016.080379611857,
+      "pred_gbm": 7750.7803414914315
+    },
+    "2018-12": {
+      "viirs_obs": 11215.0,
+      "modis": 3074.0,
+      "pred_monthly_ratio": 12347.315902148028,
+      "pred_gbm": 11939.897149828006
+    },
+    "2019-01": {
+      "viirs_obs": 16419.0,
+      "modis": 2582.0,
+      "pred_monthly_ratio": 13151.049108517846,
+      "pred_gbm": 13471.465466775282
+    },
+    "2019-02": {
+      "viirs_obs": 15031.0,
+      "modis": 2238.0,
+      "pred_monthly_ratio": 13520.49972445718,
+      "pred_gbm": 13284.530771838598
+    },
+    "2019-03": {
+      "viirs_obs": 5805.0,
+      "modis": 799.0,
+      "pred_monthly_ratio": 5737.402604166667,
+      "pred_gbm": 5453.375822176985
+    },
+    "2019-04": {
+      "viirs_obs": 1365.5,
+      "modis": 105.0,
+      "pred_monthly_ratio": 1042.3419055649242,
+      "pred_gbm": 1145.3016947043202
+    },
+    "2019-05": {
+      "viirs_obs": 315.0,
+      "modis": 25.0,
+      "pred_monthly_ratio": 290.13671875,
+      "pred_gbm": 341.8581820554368
+    },
+    "2019-06": {
+      "viirs_obs": 65.5,
+      "modis": 2.0,
+      "pred_monthly_ratio": 27.833333333333332,
+      "pred_gbm": 69.69785152255591
+    },
+    "2019-07": {
+      "viirs_obs": 21.0,
+      "modis": 1.0,
+      "pred_monthly_ratio": 35.8125,
+      "pred_gbm": 39.431077609218896
+    },
+    "2019-08": {
+      "viirs_obs": 79.5,
+      "modis": 2.0,
+      "pred_monthly_ratio": 25.67391304347826,
+      "pred_gbm": 50.30587443121658
+    },
+    "2019-09": {
+      "viirs_obs": 16.5,
+      "modis": 2.0,
+      "pred_monthly_ratio": 33.69230769230769,
+      "pred_gbm": 40.300656693892606
+    },
+    "2019-10": {
+      "viirs_obs": 24.0,
+      "modis": 2.0,
+      "pred_monthly_ratio": 9.864556962025317,
+      "pred_gbm": 52.54909174591066
+    },
+    "2019-11": {
+      "viirs_obs": 6676.0,
+      "modis": 1880.0,
+      "pred_monthly_ratio": 6660.575938208379,
+      "pred_gbm": 6918.672008979243
+    },
+    "2019-12": {
+      "viirs_obs": 12887.0,
+      "modis": 3250.0,
+      "pred_monthly_ratio": 12978.488779380148,
+      "pred_gbm": 12123.683296915164
+    },
+    "2020-01": {
+      "viirs_obs": 12404.5,
+      "modis": 2361.0,
+      "pred_monthly_ratio": 12257.079936824943,
+      "pred_gbm": 12386.186292678456
+    },
+    "2020-02": {
+      "viirs_obs": 18422.5,
+      "modis": 3591.0,
+      "pred_monthly_ratio": 22717.089829095454,
+      "pred_gbm": 19404.506474351907
+    },
+    "2020-03": {
+      "viirs_obs": 5877.5,
+      "modis": 766.0,
+      "pred_monthly_ratio": 5459.518556878991,
+      "pred_gbm": 5109.216931403926
+    },
+    "2020-04": {
+      "viirs_obs": 1852.5,
+      "modis": 195.0,
+      "pred_monthly_ratio": 2008.0907846715327,
+      "pred_gbm": 1598.1094655795719
+    },
+    "2020-05": {
+      "viirs_obs": 600.0,
+      "modis": 67.0,
+      "pred_monthly_ratio": 840.9439252336448,
+      "pred_gbm": 536.4284093071999
+    },
+    "2020-06": {
+      "viirs_obs": 58.5,
+      "modis": 2.0,
+      "pred_monthly_ratio": 28.09259259259259,
+      "pred_gbm": 68.66461594624707
+    },
+    "2020-07": {
+      "viirs_obs": 24.0,
+      "modis": 0.0,
+      "pred_monthly_ratio": 0.0,
+      "pred_gbm": 29.993520136500486
+    },
+    "2020-08": {
+      "viirs_obs": 125.5,
+      "modis": 3.0,
+      "pred_monthly_ratio": 36.3,
+      "pred_gbm": 44.91011597635394
+    },
+    "2020-09": {
+      "viirs_obs": 41.0,
+      "modis": 3.0,
+      "pred_monthly_ratio": 49.62,
+      "pred_gbm": 46.091984386543785
+    },
+    "2020-10": {
+      "viirs_obs": 150.0,
+      "modis": 42.0,
+      "pred_monthly_ratio": 211.14799999999997,
+      "pred_gbm": 241.46154020866086
+    },
+    "2020-11": {
+      "viirs_obs": 4287.0,
+      "modis": 1173.0,
+      "pred_monthly_ratio": 4150.236495576664,
+      "pred_gbm": 4042.877716535493
+    },
+    "2020-12": {
+      "viirs_obs": 11237.5,
+      "modis": 2712.0,
+      "pred_monthly_ratio": 10797.782568260403,
+      "pred_gbm": 11160.499692012716
+    },
+    "2021-01": {
+      "viirs_obs": 17555.5,
+      "modis": 3516.0,
+      "pred_monthly_ratio": 18358.288047512993,
+      "pred_gbm": 17824.9290120764
+    },
+    "2021-02": {
+      "viirs_obs": 14356.5,
+      "modis": 2248.0,
+      "pred_monthly_ratio": 13672.007278341422,
+      "pred_gbm": 13404.352464890058
+    },
+    "2021-03": {
+      "viirs_obs": 5077.5,
+      "modis": 771.0,
+      "pred_monthly_ratio": 5606.467432619213,
+      "pred_gbm": 5224.150460685214
+    },
+    "2021-04": {
+      "viirs_obs": 1737.5,
+      "modis": 212.0,
+      "pred_monthly_ratio": 2240.1464318813714,
+      "pred_gbm": 1782.7861885082805
+    },
+    "2021-05": {
+      "viirs_obs": 484.0,
+      "modis": 31.0,
+      "pred_monthly_ratio": 347.44800000000004,
+      "pred_gbm": 331.31455875317243
+    },
+    "2021-06": {
+      "viirs_obs": 151.0,
+      "modis": 13.0,
+      "pred_monthly_ratio": 201.34883720930233,
+      "pred_gbm": 109.21004169881827
+    },
+    "2021-07": {
+      "viirs_obs": 25.5,
+      "modis": 0.0,
+      "pred_monthly_ratio": 0.0,
+      "pred_gbm": 31.292456824734995
+    },
+    "2021-08": {
+      "viirs_obs": 22.0,
+      "modis": 2.0,
+      "pred_monthly_ratio": 28.17391304347826,
+      "pred_gbm": 49.34669434313949
+    },
+    "2021-09": {
+      "viirs_obs": 22.5,
+      "modis": 0.0,
+      "pred_monthly_ratio": 0.0,
+      "pred_gbm": 28.90773794624786
+    },
+    "2021-10": {
+      "viirs_obs": 118.5,
+      "modis": 14.0,
+      "pred_monthly_ratio": 68.41645244215938,
+      "pred_gbm": 110.50769795444873
+    },
+    "2021-11": {
+      "viirs_obs": 4163.5,
+      "modis": 1258.0,
+      "pred_monthly_ratio": 4472.811692030764,
+      "pred_gbm": 4434.631390419667
+    },
+    "2021-12": {
+      "viirs_obs": 10090.5,
+      "modis": 2269.0,
+      "pred_monthly_ratio": 9000.96098211336,
+      "pred_gbm": 9244.93329963379
+    }
+  },
+  "availability": {
+    "Aqua": [
+      "2002-07-04",
+      "2026-11-15"
+    ],
+    "N20": [
+      "2018-04-01",
+      "2026-11-15"
+    ],
+    "N21": [
+      "2023-03-01",
+      "2026-11-15"
+    ],
+    "SNPP": [
+      "2012-01-20",
+      "2026-11-02"
+    ],
+    "Terra": [
+      "2000-11-01",
+      "2026-11-15"
+    ]
+  }
+}
