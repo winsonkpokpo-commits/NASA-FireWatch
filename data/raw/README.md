@@ -1,16 +1,16 @@
-# Raw NASA FIRMS downloads
+# Raw NASA FIRMS downloads for Benin
 
-These are the original ZIP archives supplied by NASA FIRMS for download requests 850932, 850933, and 850931. They are kept unmodified. Each archive contains one archive-quality CSV, one near-real-time (NRT) CSV, and FIRMS' short readme pointer.
+These are the original NASA FIRMS ZIP archives for the Benin area, downloaded on 15 November 2026. The archives are kept unmodified. Each contains a standard/archive CSV, an NRT CSV, and FIRMS' readme pointer. Counts and date spans below describe rows present in each CSV; a date span does not imply a detection on every day.
 
-| File | Product | Request ID | ZIP size |
-|---|---|---:|---:|
-| `DL_FIRE_J1V-C2_850932.zip` | VIIRS 375 m, NOAA-20 (J1V-C2) | 850932 | 1,854,668 bytes |
-| `DL_FIRE_J2V-C2_850933.zip` | VIIRS 375 m, NOAA-21 (J2V-C2) | 850933 | 1,740,153 bytes |
-| `DL_FIRE_M-C61_850931.zip` | MODIS Collection 6.1 (M-C61) | 850931 | 238,033 bytes |
+| File | Product | Request ID | Archive rows and dates | NRT rows and dates | ZIP size |
+|---|---|---:|---|---|---:|
+| `DL_FIRE_M-C61_850991.zip` | MODIS Collection 6.1 (Terra/Aqua) | 850991 | 431,121; 2000-11-01 to 2026-08-25 | 362; 2026-10-16 to 2026-11-15 | 7,221,911 bytes |
+| `DL_FIRE_J1V-C2_850992.zip` | VIIRS 375 m, NOAA-20 | 850992 | 512,608; 2018-04-01 to 2026-07-25 | 2,861; 2026-08-04 to 2026-11-15 | 9,104,696 bytes |
+| `DL_FIRE_J2V-C2_850993.zip` | VIIRS 375 m, NOAA-21 | 850993 | 161,434; 2023-03-01 to 2026-07-26 | 2,558; 2026-08-04 to 2026-11-15 | 2,925,512 bytes |
 
-The CSVs cover the request's area and dates. NRT observations are provisional and may later be replaced by standard-quality data. Do not interpret these detections as confirmed fire perimeters or use them for tactical/local-scale emergency decisions.
+The MODIS archive provides the long record from November 2000; VIIRS records begin when each satellite's product becomes available. NASA notes that NRT records are replaced by standard-quality data as they become available (typically after several months). Keep source/product identity and processing version when combining records, and avoid counting overlapping detections twice.
 
-## Source and attribution
+## Source, attribution, and disclaimer
 
 Source: [NASA FIRMS](https://firms.modaps.eosdis.nasa.gov/), part of NASA LANCE/ESDIS. NASA promotes open sharing of data and requests that third-party redistribution follow its citation guidance and replicate or link to the disclaimer.
 
@@ -19,6 +19,4 @@ Suggested acknowledgement: “We acknowledge the use of data and/or imagery from
 - [NASA FIRMS citation and disclaimer guidance](https://www.earthdata.nasa.gov/earth-observation-data/near-real-time/citation#ed-firms-citation)
 - [FIRMS download readme](https://firms.modaps.eosdis.nasa.gov/download/Readme.txt)
 
-The archive readmes do not identify a separate license for these downloaded files. Refer to NASA's current data-use guidance before redistributing modified or derived datasets. This project is independent and is not endorsed by NASA.
-
-Download snapshots stored in this repository were received in November 2026. Their source records contain acquisition dates in 2025 and NRT dates in August/September 2026.
+FIRMS data are provided “as is.” The disclaimer cautions that their spatial resolution and other characteristics make them unsuitable for tactical decision-making or informing about conditions at a local scale. The archive readmes do not identify a separate license for these downloaded files. This project is independent and is not endorsed by NASA.
